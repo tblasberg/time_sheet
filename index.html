@@ -14,35 +14,54 @@
 <body>
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-          <h1 class="display-4">Time Sheet</h1>
-          <p class="lead">Keep track of how much your employees are costing you.</p>
+            <h1 class="display-4">Time Sheet</h1>
+            <p class="lead">Keep track of how much your employees are costing you.</p>
         </div>
-      </div>
+    </div>
 
-      <table class="table">
+    <table class="table">
         <thead>
-          <tr>
-            <th scope="col">Employee Name</th>
-            <th scope="col">Role</th>
-            <th scope="col">Start Date</th>
-            <th scope="col">Months worked</th>
-            <th scope="col">Monthly Pay</th>
-            <th scope="col">Total Billed</th>
-          </tr>
+            <tr>
+                <th scope="col">Employee Name</th>
+                <th scope="col">Role</th>
+                <th scope="col">Start Date</th>
+                <th scope="col">Months worked</th>
+                <th scope="col">Monthly Pay</th>
+                <th scope="col">Total Billed</th>
+            </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">Anthony</th>
-            <td>Full Stack Developer</td>
-            <td>01/06/2019</td>
-            <td>3</td>
-            <td>3000</td>
-            <td>9000</td>
-          </tr>
+            <tr>
+                <th scope="row">Anthony</th>
+                <td>Full Stack Developer</td>
+                <td>01/06/2019</td>
+                <td>3</td>
+                <td>3000</td>
+                <td>9000</td>
+            </tr>
         </tbody>
-      </table>
+    </table>
 
-      
+    <form>
+        <div class="form-group">
+            <label for="inputName">Employee Name</label>
+            <input type="name" class="form-control" id="employeeName" aria-describedby="name"
+                placeholder="Enter employee name">
+        </div>
+        <div class="form-group">
+            <label for="inputRole">Role</label>
+            <input type="Role" class="form-control" id="inputRole" placeholder="Role">
+        </div>
+        <div class="form-group">
+            <label for="inputStartDate">Start Date</label>
+            <input type="Role" class="form-control" id="inputStartDate" placeholder="Start Date">
+        </div>
+        <div class="form-group">
+            <label for="inputRole">Monthly Rate</label>
+            <input type="Role" class="form-control" id="inputMonthlyRate" placeholder="Monthly Rate">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
 
 
 
