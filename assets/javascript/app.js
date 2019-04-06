@@ -8,7 +8,7 @@ var config = {
     messagingSenderId: "969988699336"
   };
   firebase.initializeApp(config);
-
+var database = firebase.database();
 var newHtmlRow = [];
 
 $(document).on("click", "button", function(){
