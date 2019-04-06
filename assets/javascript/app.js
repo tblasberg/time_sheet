@@ -1,4 +1,4 @@
-$(document).ready();
+$(document).ready(function(){
 var config = {
   apiKey: "AIzaSyBob15vJF-aHVOkIJ2eGf_E7kW7pe4mBCo",
   authDomain: "time-sheet-baa68.firebaseapp.com",
@@ -14,7 +14,8 @@ var role = "";
 var startDate ="";
 var monthlyRate =0;
 
-$(document).on("click", "button", function() {
+$(".btn").on("click", function(event) {
+  event.preventDefault();
   name = $("#employeeName")
     .val()
     .trim();
@@ -24,15 +25,25 @@ $(document).on("click", "button", function() {
   startDate = $("#inputStartDate")
     .val()
     .trim();
-  monthlyRate = $("inputMonthlyRate")
+  monthlyRate = $("#inputMonthlyRate")
     .val()
     .trim();
     console.log(name);
 });
 
-database.ref().set({
+database.ref().push({
   name: name,
   role: role,
   startDate: startDate,
   monthlyRate: monthlyRate,
+});
+
+database.ref().on("child_added", function (childSnapshot){
+  console.log(childSnapshot.val());
+  console.log(childSnapshot.val().name);
+});
+},
+
+function (errorObject) {
+  console.log("Errors handled: " + errorObject.code);
 });
