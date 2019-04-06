@@ -1,0 +1,30 @@
+.jumbotron{
+    background-image: url("https://evolvingwisdom.com/blog/wp-content/uploads/2016/03/shutterstock_271332740.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    color: white;
+    font-family: cursive;
+}
+
+.lead{
+    margin-top: 15px;
+    color: lightcyan;
+    font-weight: bolder;
+}
+
+.card-footer{
+    text-align: center;
+    background-color: rgb(134, 102,52);
+    color: whitesmoke;
+    font-family: cursive;
+}
+
+#submit{
+    border-color: rgb(134, 102,52);
+}
+
+body{
+    background-color: whitesmoke;
+    
+}
