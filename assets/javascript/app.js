@@ -9,19 +9,30 @@ var config = {
 };
 firebase.initializeApp(config);
 var database = firebase.database();
-var newHtmlRow = [];
+var name = "";
+var role = "";
+var startDate ="";
+var monthlyRate =0;
 
 $(document).on("click", "button", function() {
-  $("#employeeName")
+  name = $("#employeeName")
     .val()
     .trim();
-  $("#inputRole")
+  role = $("#inputRole")
     .val()
     .trim();
-  $("#inputStartDate")
+  startDate = $("#inputStartDate")
     .val()
     .trim();
-  $("inputMonthlyRate")
+  monthlyRate = $("inputMonthlyRate")
     .val()
     .trim();
+    console.log(name);
+});
+
+database.ref().set({
+  name: name,
+  role: role,
+  startDate: startDate,
+  monthlyRate: monthlyRate,
 });
